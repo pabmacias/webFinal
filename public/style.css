@@ -1,0 +1,164 @@
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+	background: transparent;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+.row{
+	clear: both;
+	display: flex;
+}
+
+.col-7-10{
+	width: 70%;
+	float: left;
+}
+
+.col-6-10{
+	width: 60%;
+	float: left;
+}
+
+.col-3-10{
+	width: 30%;
+	float: left;
+}
+
+.col-1-5{
+	width: 20%;
+	float: left;
+}
+
+.col-1-10{
+	width: 10%;
+	float: left;
+}
+
+.col-1-2{
+	width: 50%;
+	float: left;
+}
+
+.col-1-1{
+	width: 100%;
+	float: left;
+}
+
+.centerVertically{
+	align-items: center;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 481px){ 
+	.menuXS{
+		background-color: #70C9CA;
+		height: 70px;
+	}
+
+	.rayas{
+		height: 40px;
+		width: 50px;
+	}
+
+	.logo{
+		height: 70px;
+	}
+
+	.cart{
+		height: 30px;
+	}
+
+	.lupa{
+		height: 30px;
+	}
+
+	.espacioXS{
+		height: 10px;
+	}
+
+	.oferta{
+		height: 200px;
+		width: 100%;
+	}
+
+	.margenDerecha{
+		margin-right: 15px;
+	}
+
+	.margenIzquierda{
+		margin-left: 15px;
+	}
+
+	.tendencias{
+		width: 100%;
+		height: 200px;
+	}
+
+	.populares{
+		width: 100%;
+		height: 200px;
+	}
+
+	.margenDerecha2{
+		margin-right: 5px;
+	}
+
+	.margenIzquierda2{
+		margin-left: 5px;
+	}
+
+	.footer{
+		background-color: gray;
+		color: white;
+		height: 30px;
+		padding-top: 12px;	
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margenArriba{
+		padding: 20px 0 20px 0;
+		background-color: #999999;
+	}
+
+	p{
+		color: white;
+	}
+
+	.margen{
+		margin: 7vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	.linea{
+		border-top-style: solid;
+		border-top-color: #999999;
+		border-top-width: medium; 
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100vw;
+		display: none;
+	}
+}
