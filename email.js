@@ -4,7 +4,7 @@ exports.poolConfig = {
   port: 465,
   secure: true,
   auth: {
-    user: 'pabmacias28@gmail.com',
-    pass: '...'
+    user: 'maaloka28@gmail.com',
+    pass: 'hola12345'
   }
 };

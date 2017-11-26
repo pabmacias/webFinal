@@ -1,28 +1,70 @@
+var db = require('../../db');
+var Wishlist = require('../models/wishlist');
+//var Cart = require('../models/cart');
 
 exports.login = function (req,res){
-	var response = {status:'ERROR', message:'User not found'}
-	res.send(response);
-	//res.render('index', { title: 'Express' });
+	console.log('select * from Users where mail="'+req.body.mail+'" and password="'+req.body.password+'";')
+	db.get().query('select * from Users where mail="'+req.body.mail+'" and password="'+req.body.password+'";', function (err, rows) {
+		var response = {};
+		var data = [];
+
+	    if (err){
+	    	response.status = 'ERROR';
+	    	response.message = err;
+	  	}
+	  	if (rows && rows.length > 0){
+		    response.status = 'SUCCESS';
+		    response.message = 'User logged in';
+		    var data = {
+		    	mail: rows[0].mail
+		    }
+		    req.session.mail = data.mail;
+		    response.data = data;
+		}
+		else{
+			response.status = 'ERROR';
+			response.message = 'No hay registros';
+		}
+		res.send(response);
+	})
 }
 
 exports.register = function (req,res){
-	var response = {status:'SUCCESS', message:'User registered',
-									data: {user: {email:"Eduardo"}}}
-	res.send(response);
-	//res.render('index', { title: 'Express' });
+	console.log('insert into Users (username, password, nameUser, mail, phone) values ("'+req.body.username+
+		'","'+req.body.password+'","'+req.body.nameUser+'","'+req.body.mail+
+		'","'+req.body.phone+'");');
+	db.get().query('insert into Users (username, password, nameUser, mail, phone) values ("'+req.body.username+
+		'","'+req.body.password+'","'+req.body.nameUser+'","'+req.body.mail+
+		'","'+req.body.phone+'");', function (err, result) {
+
+		var response = {};
+		var data = {};
+
+	  if (err){
+	    	response.status = 'ERROR';
+	    	response.message = err;
+	  	}
+		else{
+			data.insertId = result.insertId;
+			response.status = 'SUCCESS';
+			response.message = '';
+			response.data = data;
+		}
+		res.send(response);
+	})
 }
 
-exports.session = function (req, res) {
+exports.session = function (req,res){
 	let response = {};
-	if (req.session && req.session.email) {
-		data = {
-			email: req.session.email;
+	if (req.session && req.session.mail){
+		var data = {
+			mail: req.session.mail
 		}
 		response.status = "SUCCESS";
 		response.message = "User already logged";
-		response.data = data;
+		response.data = data
 	}
-	else {
+	else{
 		response.status = "ERROR";
 		response.message = "User not logged in";
 	}
