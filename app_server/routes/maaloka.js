@@ -10,4 +10,6 @@ router.get('/kitchen', maalokaController.getKitchen);
 
 router.get('/livngRoom', maalokaController.getLivingRoom);
 
+router.get('/bedRoom', maalokaController.getBedRoom);
+
 module.exports = router;
