@@ -17,7 +17,6 @@ router.post('/signin', indexController.login);
 //router.redirect('/login', require('./../../public/login.html'))
 router.get('/login', function(req,res) {
   res.render('login.html');
-  //indexController.login;
 });
 
 router.get('/session', indexController.session);
