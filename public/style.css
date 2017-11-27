@@ -19,6 +19,11 @@ li, main, nav, ol, p, section, span, ul {
 	float: left;
 }
 
+.col-15-100{
+	width: 15%;
+	float: left;
+}
+
 .col-7-10{
 	width: 70%;
 	float: left;
@@ -73,6 +78,10 @@ li, main, nav, ol, p, section, span, ul {
 	width: 100%;
 }
 
+.height100{
+	height: 100%;
+}
+
 .floatLeft{
 	float: left;
 }
@@ -113,19 +122,23 @@ li, main, nav, ol, p, section, span, ul {
 	height: 25vh;
 }
 
-.backgroundColorPink{
-	background-color: pink;
+.height30vh{
+	height: 30vh;
 }
 
-.backgroundColorBlue{
-	background-color: blue;
+.backgroundLogo{
+	background-color: #70C9CA;
 }
 
-.backgroundColorGreen{
-	background-color: green;
+.footer{
+	background-color: gray;
+	color: white;
+	height: 30px;
+	padding-top: 12px;	
 }
 
 @media screen and (min-width: 300px) and (max-width: 481px){ 
+
 	.menuXS{
 		background-color: #70C9CA;
 		height: 70px;
@@ -190,13 +203,6 @@ li, main, nav, ol, p, section, span, ul {
 
 	.margenIzquierda2{
 		margin-left: 5px;
-	}
-
-	.footer{
-		background-color: gray;
-		color: white;
-		height: 30px;
-		padding-top: 12px;	
 	}
 
 	.alturaMaxima{
@@ -294,5 +300,102 @@ li, main, nav, ol, p, section, span, ul {
 
 	.estrella{
 		height: 30px;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 50vw;
+		height: 20px;
+		top: 3vh;
+		left: 35vw;
+		background-color: #70C9CA;
+	}
+
+	.signInOtherCompanies{
+		border-top-style: solid;
+		border-top-color: gray;
+		border-top-width: 1px;  
+	}
+
+	.iconoLogin{
+		height: 50px;
+	}
+
+	.tb{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 482px) and (max-width: 767px){ 
+	.xs{
+		display: none;
+	}
+
+	.menuTb{
+		background-color: #70C9CA;
+		height: 100px;
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margenArriba{
+		padding: 20px 0 20px 0;
+		background-color: #999999;
+	}
+
+	p{
+		color: white;
+	}
+
+	.margen{
+		margin: 7vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	.linea{
+		border-top-style: solid;
+		border-top-color: #999999;
+		border-top-width: medium; 
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100vw;
+		display: none;
+	}
+
+	.productoOfertasTb{
+		height: 200px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+		display: none;
+	}
+
+	.imagenOfertasTb{
+		width: 100%;	
+	}
+
+	.nombreOfertasTb{
+		background-color: #E8B097;
+	}
+
+	.heartProductoTb{
+		float: right;
+		height: 22px;
+	}
+
+	.pInline{
+		display: inline;
 	}
 }

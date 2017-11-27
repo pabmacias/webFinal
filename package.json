@@ -12,10 +12,15 @@
     "express": "~4.13.1",
     "express-mysql-session": "^1.2.2",
     "express-session": "^1.15.6",
+    "flightplan": "^0.6.17",
     "install": "^0.10.1",
+    "jsftp": "^2.0.0",
     "morgan": "~1.6.1",
     "mysql": "^2.15.0",
     "nodemailer": "^4.4.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "fly": "^2.0.6"
   }
 }
