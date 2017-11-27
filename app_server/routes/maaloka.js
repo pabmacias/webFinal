@@ -8,7 +8,7 @@ router.get('/sale', maalokaController.getSale);
 
 router.get('/kitchen', maalokaController.getKitchen);
 
-router.get('/livngRoom', maalokaController.getLivingRoom);
+router.get('/livingRoom', maalokaController.getLivingRoom);
 
 router.get('/bedRoom', maalokaController.getBedRoom);
 
