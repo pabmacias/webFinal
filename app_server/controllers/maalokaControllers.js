@@ -12,6 +12,7 @@ exports.getAll = function(req,res){
 	    	response.message = err;
 	  	}
 	  	if (rows && rows.length > 0){
+				console.log(rows);
 	  		for (var i=0; i<rows.length; i++){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
