@@ -95,7 +95,7 @@ $(document).ready(function(){
                 descripcion = data.data[0].description;
                 detalles = "Posee el Rinnegan";
                 nombreFabricante = "Maaloka"
-                id = 1; //id de cada producto
+                id = data.data[0].idProduct;
                 $(".zonaProductosMD").append("<div class='bloqueProducto center'><h1 class='descuento'>"+ oferta +"%</h1><img class='width100' src='"+ imagen +"'><div class='row espacio4XS'></div><div class='row'><div class='col-7-10'><h1 class='font200 floatLeft'>"+ nombreProducto +"</h1></div><div class='col-3-10'><h1 class='cantidad font250'>$"+ precio.toFixed(2) +"</h1></div></div><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Descripcion: "+ descripcion +"</h1><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Detalles: "+ detalles +"</h1><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Nombre del fabricante: "+ nombreFabricante +"</h1><div class='row espacio2XS'></div><div class='row inline'><div class='col-1-5'><img class='width100 productoCart' data-id='"+ id +"' src='blueCart.png'></div><div class='col-1-5 floatRight'><img class='width100 productoHeart' data-id='"+ id +"'' src='blueHeart.png'></div></div></div>");
 
                 var listaHeart = document.getElementsByClassName("productoHeart");
@@ -118,7 +118,7 @@ $(document).ready(function(){
               descripcion = data.data[0].description;
               detalles = "Posee el Rinnegan";
               nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+              id = data.data[0].idProduct;
                 $(".zonaProductosLG").append("<div class='bloqueProducto center'><h1 class='descuento'>"+ oferta +"%</h1><img class='width100' src='"+ imagen +"'><div class='row espacio4XS'></div><div class='row'><div class='col-7-10'><h1 class='font200 floatLeft'>"+ nombreProducto +"</h1></div><div class='col-3-10'><h1 class='cantidad font250'>$"+ precio.toFixed(2) +"</h1></div></div><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Descripcion: "+ descripcion +"</h1><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Detalles: "+ detalles +"</h1><div class='row espacio2XS'></div><h1 class='floatLeft font150'>Nombre del fabricante: "+ nombreFabricante +"</h1><div class='row espacio2XS'></div><div class='row inline'><div class='col-1-5'><img class='width100 productoCart' data-id='"+ id +"' src='blueCart.png'></div><div class='col-1-5 floatRight'><img class='width100 productoHeart' data-id='"+ id +"' src='blueHeart.png'></div></div></div>");
 
                 var listaHeart = document.getElementsByClassName("productoHeart");
