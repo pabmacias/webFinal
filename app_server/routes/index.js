@@ -25,5 +25,9 @@ router.get('/register', indexController.register);
 
 router.get('/addWishlist', indexController.addWishlist);
 router.get('/addCart', indexController.addCart);
+router.get('/addOrder', indexController.addOrder);
+
+router.get('/getWishlist', indexController.getWishlist);
+
 
 module.exports = router;

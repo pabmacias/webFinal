@@ -1,65 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Maalo'ka</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="jquery-3.2.1.min.js"></script>
-  <script src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Maalo'ka</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="script.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-  <div class="xs">
-    <div class="row height25vh">
-      <div class="col-1-1 backgroundLogo center">
-        <img class="height100" src="Logo.png">
-      </div>
-    </div>
-
-		<form action="/signin" method="post">
-	    <div class="signIn height25vh">
-	      <div class="espacio2XS"></div>
-	      <div class="row">
-	        <div class="col-9-10 center">
-	          <input type="text" name="mail" placeholder="Email Address">
-	        </div>
-	      </div>
-	      <div class="espacio2XS"></div>
-	      <div class="row">
-	        <div class="col-9-10 center">
-	          <input type="password" name="password" placeholder="Password">
-	        </div>
-	      </div>
-	      <div class="espacio2XS"></div>
-	      <div class="row">
-	        <div class="col-9-10 center">
-	          <button type=submit>Sign In</button>
-	        </div>
-	      </div>
-	    </div>
-		</form>
-
-    <div class="signInOtherCompanies height25vh">
-      <div class="espacio2XS"></div>
-      <div class="row">
-        <div class="col-9-10 center">
-          <p class="black">or sign in with one of these services</p>
-        </div>
-      </div>
-      <div class="espacio2XS"></div>
-      <div class="row">
-        <div class="col-9-10 center">
-          <img class="iconoLogin" src="facebook.png">
-        </div>
-      </div>
-      <div class="espacio2XS"></div>
-      <div class="row">
-        <div class="col-9-10 center">
-          <img class="iconoLogin" src="google.png">
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="xs">
+		<div class="row">
+			<div class="col-1-1 backgroundLogo center">
+				<img class="width100" src="Logo.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-1-1">
+				<div class="espacio2XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="text" class="width100 inputHeightXS" placeholder="Email Address">
+					</div>
+				</div>
+				<div class="espacio2XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="password" class="width100 inputHeightXS" placeholder="Password">
+					</div>
+				</div>
+				<div class="espacio2XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Sign In</button>
+					</div>
+				</div>
+				<div class="espacio2XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Register</button>
+					</div>
+				</div>
+				<div class="espacio2XS"></div>
+			</div>
+		</div>
+		<div class="signInOtherCompanies">
+			<div class="espacio2XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<p class="black">or sign in with one of these services</p>
+				</div>
+			</div>
+			<div class="espacio2XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLogin" src="facebook.png">
+				</div>
+			</div>
+			<div class="espacio2XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLogin" src="google.png">
+				</div>
+			</div>
+		</div>
+		<div class="espacio2XS"></div>
+	</div>
+	<div class="tb">
+		<div class="row">
+			<div class="col-1-1 center backgroundLogo">
+				<img class="backgroundLogoTB" src="Logo.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-1-1">
+				<div class="espacio3XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="text" class="inputHeightTB" placeholder="Email Address">
+					</div>
+				</div>
+				<div class="espacio3XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="password" class="inputHeightTB" placeholder="Password">
+					</div>
+				</div>
+				<div class="espacio3XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Sign In</button>
+					</div>
+				</div>
+				<div class="espacio3XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Register</button>
+					</div>
+				</div>
+				<div class="espacio3XS"></div>
+			</div>
+		</div>
+		<div class="signInOtherCompanies">
+			<div class="espacio3XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<p class="black">or sign in with one of these services</p>
+				</div>
+			</div>
+			<div class="espacio3XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLogin" src="facebook.png">
+				</div>
+			</div>
+			<div class="espacio3XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLogin" src="google.png">
+				</div>
+			</div>
+		</div>
+		<div class="espacio3XS"></div>
+	</div>
+	<div class="lg">
+		<div class="row">
+			<div class="col-1-1">
+				<div class="row bloqueLG center">
+					<div class="col-1-1 center backgroundLogo">
+						<img class="backgroundLogoSM" src="Logo.png">
+					</div>
+				</div>
+				<div class="row bloqueLG center">
+					<div class="col-1-1">
+						<div class="espacio4XS"></div>
+						<div class="row">
+							<div class="col-8-10 center">
+								<input type="text" class="inputHeightSM" placeholder="Email Address">
+							</div>
+						</div>
+						<div class="espacio4XS"></div>
+						<div class="row">
+							<div class="col-8-10 center">
+								<input type="password" class="inputHeightSM" placeholder="Password">
+							</div>
+						</div>
+						<div class="espacio4XS"></div>
+						<div class="row">
+							<div class="col-9-10 center">
+								<button>Sign In</button>
+							</div>
+						</div>
+						<div class="espacio4XS"></div>
+						<div class="row">
+							<div class="col-9-10 center">
+								<button>Register</button>
+							</div>
+						</div>
+						<div class="espacio4XS"></div>
+					</div>
+				</div>
+				<div class="signInOtherCompaniesSM bloqueLG center">
+					<div class="espacio4XS"></div>
+					<div class="row">
+						<div class="col-9-10 center">
+							<p class="black">or sign in with one of these services</p>
+						</div>
+					</div>
+					<div class="espacio4XS"></div>
+					<div class="row">
+						<div class="col-9-10 center">
+							<img class="iconoLoginSM" src="facebook.png">
+						</div>
+					</div>
+					<div class="espacio4XS"></div>
+					<div class="row">
+						<div class="col-9-10 center">
+							<img class="iconoLoginSM" src="google.png">
+						</div>
+					</div>
+				</div>
+				<div class="espacio4XS"></div>
+				<div class="row bloqueLG center">
+					<div class="col-1-1 footer center">
+						<p>Derechos Reservados S.A. de C.V</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="noXS noTB noLG">
+		<div class="row">
+			<div class="col-1-1 center backgroundLogo">
+				<img class="backgroundLogoSM" src="Logo.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-1-1">
+				<div class="espacio4XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="text" class="inputHeightSM" placeholder="Email Address">
+					</div>
+				</div>
+				<div class="espacio4XS"></div>
+				<div class="row">
+					<div class="col-8-10 center">
+						<input type="password" class="inputHeightSM" placeholder="Password">
+					</div>
+				</div>
+				<div class="espacio4XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Sign In</button>
+					</div>
+				</div>
+				<div class="espacio4XS"></div>
+				<div class="row">
+					<div class="col-9-10 center">
+						<button>Register</button>
+					</div>
+				</div>
+				<div class="espacio4XS"></div>
+			</div>
+		</div>
+		<div class="signInOtherCompaniesSM">
+			<div class="espacio4XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<p class="black">or sign in with one of these services</p>
+				</div>
+			</div>
+			<div class="espacio4XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLoginSM" src="facebook.png">
+				</div>
+			</div>
+			<div class="espacio4XS"></div>
+			<div class="row">
+				<div class="col-9-10 center">
+					<img class="iconoLoginSM" src="google.png">
+				</div>
+			</div>
+		</div>
+		<div class="espacio4XS"></div>
+	</div>
+	<div class="noLG">
+		<div class="row">
+			<div class="col-1-1 footer center">
+				<p>Derechos Reservados S.A. de C.V</p>
+			</div>
+		</div>
+	</div>
 </body>

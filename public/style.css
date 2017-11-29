@@ -19,8 +19,23 @@ li, main, nav, ol, p, section, span, ul {
 	float: left;
 }
 
+.col-15-100{
+	width: 15%;
+	float: left;
+}
+
+.col-1-4{
+	width: 25%;
+	float: left;
+}
+
 .col-7-10{
 	width: 70%;
+	float: left;
+}
+
+.col-8-10{
+	width: 80%;
 	float: left;
 }
 
@@ -73,8 +88,20 @@ li, main, nav, ol, p, section, span, ul {
 	width: 100%;
 }
 
+.width90{
+	width: 90%;
+}
+
+.height100{
+	height: 100%;
+}
+
 .floatLeft{
 	float: left;
+}
+
+.floatRight{
+	float: right;
 }
 
 .inline{
@@ -89,12 +116,24 @@ li, main, nav, ol, p, section, span, ul {
 	font-size: 150%;
 }
 
+.font250{
+	font-size: 250%;
+}
+
+.font200{
+	font-size: 200%;
+}
+
 .font125{
 	font-size: 125%;
 }
 
 .black{
 	color: black;
+}
+
+.white{
+	color: white;
 }
 
 .textAlignLeft{
@@ -113,19 +152,58 @@ li, main, nav, ol, p, section, span, ul {
 	height: 25vh;
 }
 
-.backgroundColorPink{
-	background-color: pink;
+.height30vh{
+	height: 30vh;
 }
 
-.backgroundColorBlue{
-	background-color: blue;
+.backgroundLogo{
+	background-color: #70C9CA;
 }
 
-.backgroundColorGreen{
-	background-color: green;
+.footer{
+	background-color: gray;
+	color: white;
+	height: 30px;
+	padding-top: 12px;	
+}
+
+.espacioXS{
+	height: 10px;
+}
+
+.espacio2XS{
+	height: 20px;
+}
+
+.espacio4XS{
+	height: 40px;
+}
+
+.backgroundLogoSM{
+	height: 250px; 
+}
+
+.inputHeightSM{
+	height: 25px;
+	width: 200px;
+}
+
+.iconoLoginSM{
+	height: 85px;
+}
+
+.signInOtherCompaniesSM{
+	border-top-style: solid;
+	border-top-color: gray;
+	border-top-width: 1px;  
 }
 
 @media screen and (min-width: 300px) and (max-width: 481px){ 
+
+	.noXS{
+		display: none;
+	}
+
 	.menuXS{
 		background-color: #70C9CA;
 		height: 70px;
@@ -148,17 +226,13 @@ li, main, nav, ol, p, section, span, ul {
 		height: 30px;
 	}
 
-	.espacioXS{
-		height: 10px;
-	}
-
-	.espacio2XS{
-		height: 20px;
-	}
-
 	.oferta{
 		height: 200px;
 		width: 100%;
+	}
+
+	.inputHeightXS{
+		height: 25px;
 	}
 
 	.recomendaciones{
@@ -190,13 +264,6 @@ li, main, nav, ol, p, section, span, ul {
 
 	.margenIzquierda2{
 		margin-left: 5px;
-	}
-
-	.footer{
-		background-color: gray;
-		color: white;
-		height: 30px;
-		padding-top: 12px;	
 	}
 
 	.alturaMaxima{
@@ -243,6 +310,13 @@ li, main, nav, ol, p, section, span, ul {
 		outline-color: #1F464B;
 		outline-width: 2px; 
 		display: none;
+	}
+
+	.producto{
+		height: 200px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
 	}
 
 	.imagenOfertas{
@@ -293,6 +367,657 @@ li, main, nav, ol, p, section, span, ul {
 	}
 
 	.estrella{
+		height: 30px;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 50vw;
+		height: 20px;
+		top: 20px;
+		left: 35vw;
+		background-color: #70C9CA;
+	}
+
+	.signInOtherCompanies{
+		border-top-style: solid;
+		border-top-color: gray;
+		border-top-width: 1px;  
+	}
+
+	.iconoLogin{
+		height: 50px;
+	}
+
+	.tb{
+		display: none;
+	}
+
+	.sm{
+		display: none;
+	}
+
+	.md{
+		display: none;
+	}
+
+	.lg{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 482px) and (max-width: 767px){ 
+
+	.noTB{
+		display: none;
+	}
+
+	.xs{
+		display: none;
+	}
+
+	.sm{
+		display: none;
+	}
+
+	.md{
+		display: none;
+	}
+
+	.lg{
+		display: none;
+	}
+
+	.menuTb{
+		background-color: #70C9CA;
+		height: 100px;
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margenArriba{
+		padding: 20px 0 20px 0;
+		background-color: #999999;
+	}
+
+	p{
+		color: white;
+	}
+
+	.margen{
+		margin: 5vh 0 0 5vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	.linea{
+		border-top-style: solid;
+		border-top-color: #999999;
+		border-top-width: medium; 
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100vw;
+		display: none;
+	}
+
+	.productoOfertasTb{
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+		display: none;
+	}
+
+	.producto{
+		height: 200px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.imagenOfertas{
+		height: 150px;
+		width: 100%;	
+	}
+
+	.imagenOfertasTb{
+		width: 100%;	
+	}
+
+	.nombreOfertasTb{
+		background-color: #E8B097;
+	}
+
+	.heartProductoTb{
+		height: 22px;
+	}
+
+	.pInline{
+		display: inline;
+	}
+
+	.productoRecomendacionesTb{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+		display: none;
+	}
+
+	.nombreRecomendacionesTb{
+		background-color: #F24AA7;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 50vw;
+		height: 20px;
+		top: 35px;
+		left: 40vw;
+		background-color: #70C9CA;
+	}
+
+	.signInOtherCompanies{
+		border-top-style: solid;
+		border-top-color: gray;
+		border-top-width: 1px;  
+	}
+
+	.iconoLogin{
+		height: 75px;
+	}
+
+	.backgroundLogoTB{
+		height: 250px; 
+	}
+
+	.inputHeightTB{
+		height: 25px;
+		width: 200px;
+	}
+
+	.espacio3XS{
+		height: 30px;
+	}
+
+	.bloqueProducto{
+		width: 85%;
+	}
+
+	.descuento{
+		color: #70C9CA;
+		float: left;
+		font-size: 300%;
+	}
+
+	.estrella{
+		height: 50px;
+	}
+
+	.estrella2{
+		height: 30px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){ 
+	.xs{
+		display: none;
+	}
+
+	.tb{
+		display: none;
+	}
+
+	.md{
+		display: none;
+	}
+
+	.lg{
+		display: none;
+	}
+
+	.menuSM{
+		height: 150px;
+		background-color: #70C9CA;
+	}
+
+	.inputBuscador{
+		width: 80%;
+		height: 25px;
+	}
+
+	.heartProductoSM{
+		height: 22px;
+	}
+
+	.nombreOfertasSM{
+		background-color: #E8B097;
+	}
+
+	.producto{
+		height: 215px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.imagenOfertas{
+		height: 150px;
+		width: 100%;	
+	}
+
+	.productoOfertasSM{
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.productoRecomendacionesSM{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+	}
+
+	.nombreProducto{
+		background-color: #E8B097;
+		height: 40px;
+	}
+
+	.nombreProducto2{
+		background-color: #E8B097;
+		height: 20px;
+	}
+
+	.nombreRecomendacionesSM{
+		background-color: #F24AA7;
+	}
+
+	.backgroundRecomendaciones{
+		background-color: #F24AA7;	
+	}
+
+	.backgroundOferta{
+		background-color: #E8B097;	
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100vw;
+		display: none;
+	}
+
+	.margenArriba{
+		padding: 2px 0 2px 0;
+		background-color: #999999;
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margen{
+		margin: 5vh 0 0 5vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	p{
+		color: white;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 50vw;
+		height: 25px;
+		top: 60px;
+		left: 40vw;
+		background-color: #70C9CA;
+	}
+
+	.bloqueProducto{
+		width: 80%;
+	}
+
+	.descuento{
+		color: #70C9CA;
+		float: left;
+		font-size: 350%;
+	}
+
+	.estrella{
+		height: 50px;
+	}
+
+	.estrella2{
+		height: 30px;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){ 
+	.xs{
+		display: none;
+	}
+
+	.tb{
+		display: none;
+	}
+
+	.sm{
+		display: none;
+	}
+
+	.lg{
+		display: none;
+	}
+
+	.menuMD{
+		height: 150px;
+		background-color: #70C9CA;
+	}
+
+	.inputBuscadorMD{
+		width: 80%;
+		height: 25px;
+	}
+
+	p{
+		color: white;
+	}
+
+	.productoOfertasMD{
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.nombreOfertasMD{
+		background-color: #E8B097;
+	}
+
+	.heartProductoMD{
+		height: 22px;
+	}
+
+	.backgroundOferta{
+		background-color: #E8B097;	
+	}
+
+	.productoRecomendacionesMD{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+	}
+
+	.backgroundRecomendaciones{
+		background-color: #F24AA7;	
+	}
+
+	.nombreRecomendacionesMD{
+		background-color: #F24AA7;
+	}
+
+	.heartProductoMD{
+		height: 22px;
+	}
+
+	.productoRecomendacionesMD{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100vw;
+		display: none;
+	}
+
+	.margenArriba{
+		padding: 2px 0 2px 0;
+		background-color: #999999;
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margen{
+		margin: 5vh 0 0 5vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	.producto{
+		height: 215px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.imagenOfertas{
+		height: 150px;
+		width: 100%;	
+	}
+
+	.nombreProducto{
+		background-color: #E8B097;
+		height: 40px;
+	}
+
+	.nombreProducto2{
+		background-color: #E8B097;
+		height: 20px;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 45vw;
+		height: 35px;
+		top: 55px;
+		left: 42vw;
+		background-color: #70C9CA;
+	}
+
+	.bloqueProducto{
+		width: 80%;
+	}
+
+	.descuento{
+		color: #70C9CA;
+		float: left;
+		font-size: 350%;
+	}
+
+	.estrella{
+		height: 50px;
+	}
+
+	.estrella2{
+		height: 30px;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 2000px){ 
+	.xs{
+		display: none;
+	}
+
+	.tb{
+		display: none;
+	}
+
+	.md{
+		display: none;
+	}
+
+	.sm{
+		display: none;
+	}
+
+	.menuLG{
+		height: 150px;
+		background-color: #70C9CA;
+		width: 1200px;
+	}
+
+	.inputBuscadorLG{
+		width: 80%;
+		height: 25px;
+	}
+
+	p{
+		color: white;
+	}
+
+	.productoOfertasLG{
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.nombreOfertasLG{
+		background-color: #E8B097;
+		height: 132px;
+	}
+
+	.heartProductoMD{
+		height: 22px;
+	}
+
+	.backgroundOferta{
+		background-color: #E8B097;	
+	}
+
+	.productoRecomendacionesLG{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+	}
+
+	.backgroundRecomendaciones{
+		background-color: #F24AA7;	
+	}
+
+	.nombreRecomendacionesLG{
+		background-color: #F24AA7;
+		height: 132px;
+	}
+
+	.heartProductoLG{
+		height: 22px;
+	}
+
+	.productoRecomendacionesLG{
+		outline-style: solid;
+		outline-color: #557C31;
+		outline-width: 2px; 
+	}
+
+	.bloqueLG{
+		width: 1200px;
+	}
+
+	.overlay{
+		position: absolute;
+		width: 100%;
+		display: none;
+	}
+
+	.margenArriba{
+		padding: 2px 0 2px 0;
+		background-color: #999999;
+	}
+
+	.alturaMaxima{
+		height: 100vh;
+		background-color: gray;
+	}
+
+	.profile{
+		height: 80px;
+	}
+
+	.margen{
+		margin: 5vh 0 0 5vw;
+	}
+
+	#ultimo{
+		padding-bottom: 20vh;
+	}
+
+	.producto{
+		height: 215px;
+		outline-style: solid;
+		outline-color: #1F464B;
+		outline-width: 2px; 
+	}
+
+	.imagenOfertas{
+		height: 150px;
+		width: 100%;	
+	}
+
+	.nombreProducto{
+		background-color: #E8B097;
+		height: 40px;
+	}
+
+	.nombreProducto2{
+		background-color: #E8B097;
+		height: 20px;
+	}
+
+	.inputAbsolute{
+		position: absolute;
+		width: 600px;
+		height: 35px;
+		top: 55px;
+		left: 43vw;
+		background-color: #70C9CA;
+	}
+
+	.noLG{
+		display: none;
+	}
+
+	.bloqueProducto{
+		width: 80%;
+	}
+
+	.descuento{
+		color: #70C9CA;
+		float: left;
+		font-size: 350%;
+	}
+
+	.estrella{
+		height: 50px;
+	}
+
+	.estrella2{
 		height: 30px;
 	}
 }
