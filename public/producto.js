@@ -1,10 +1,47 @@
 function agregarCarrito(){
     console.log(this.dataset.id); //como le mando el id del producto
-    //window.location.replace("producto.html");
+
+  	$.post( "/addCart", { "idProduct" : this.dataset.id }, null, "json" )
+      .done(function( data, textStatus, jqXHR ) {
+          if ( console && console.log ) {
+  					console.log(data);
+  					console.log(textStatus);
+  					console.log(jqXHR);
+              console.log( "La solicitud se ha completado correctamente." );
+          }
+      })
+      .fail(function( jqXHR, textStatus, errorThrown ) {
+          if ( console && console.log ) {
+              console.log( "La solicitud a fallado: " +  textStatus);
+          }
+  	});
 }
 
 function agregarWishlist(){
-    console.log(this.dataset.id);
+  console.log(this.dataset.id);
+  if($(this).attr("src") == "heart.png"){
+    $(this).attr("src", "blueHeart.png");
+    //funcion para agregar a wishlist
+  }
+  else{
+    $(this).attr("src", "heart.png");
+    //funcion para eliminar de wishlist
+  }
+
+  $.post( "/addWishlist", { "idProduct" : this.dataset.id }, null, "json" )
+    .done(function( data, textStatus, jqXHR ) {
+        if ( console && console.log ) {
+          console.log(data);
+          console.log(textStatus);
+          console.log(jqXHR);
+            console.log( "La solicitud se ha completado correctamente." );
+        }
+    })
+    .fail(function( jqXHR, textStatus, errorThrown ) {
+        if ( console && console.log ) {
+            console.log( "La solicitud a fallado: " +  textStatus);
+        }
+  });
 
 }
 
