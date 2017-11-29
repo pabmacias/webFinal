@@ -27,7 +27,7 @@ $(document).ready(function(){
                 imagen = lista.image;
                 nombreProducto = lista.nameProduct
                 nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+                id = lista.idCart;
                 $(".bloqueProducto").append("<div class='row centerVertically'><div class='col-4-10'><img data-id='"+ id +"' class='width100 carritoImagen' src='"+ imagen +"'></div><div class='col-6-10'><h1 class='black'>"+ nombreProducto +"</h1><div class='espacioXS'></div><h1 class='black'>Fabricante: "+ nombreFabricante +"</h1></div></div><div class='row'><div class='col-1-1 center'><button class='carritoEliminar' data-id='"+ id +"'>Eliminar</button></div></div><div class='row espacio2XS'></div>");
             }
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
               imagen = lista.image;
               nombreProducto = lista.nameProduct
               nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+              id = lista.idCart;
                 $(".bloqueProducto").append("<div class='row centerVertically'><div class='col-6-10'><img data-id='"+ id +"' class='width100 carritoImagen' src='"+ imagen +"'></div><div class='col-4-10'><h1 class='black font125'>"+ nombreProducto +"</h1><div class='espacio2XS'></div><h1 class='black font125'>Fabricante: "+ nombreFabricante +"</div></div><div class='row'><div class='col-1-1 center'><button class='carritoEliminar' data-id='"+ id +"'>Eliminar</button></div></div><div class='row espacio2XS'></div>");
             }
 
@@ -76,7 +76,7 @@ $(document).ready(function(){
                 imagen = lista.image;
                 nombreProducto = lista.nameProduct
                 nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+                id = lista.idCart;
                 $("." + nombreClase).append("<div class='col-1-2'><div class='bloqueProducto center'><div class='row centerVertically'><div class='col-4-10'><img data-id='"+ id +"' class='width100 carritoImagen' src='"+ imagen +"'></div><div class='col-6-10'><h1 class='black'>"+ nombreProducto +"</h1><div class='espacio2XS'></div><h1 class='black'>Fabricante: "+ nombreFabricante +"</h1></div></div><div class='row'><div class='col-1-1 center'><button class='carritoEliminar' data-id='"+ id +"'>Eliminar</button></div></div></div></div>");
             }
 
@@ -104,7 +104,7 @@ $(document).ready(function(){
                 imagen = lista.image;
                 nombreProducto = lista.nameProduct
                 nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+                id = lista.idCart;
                 $("." + nombreClase).append("<div class='col-1-2'><div class='bloqueProducto center'><div class='row centerVertically'><div class='col-1-2'><img data-id='"+ id +"' class='width100 carritoImagen' src='"+ imagen +"'></div><div class='col-1-2'><h1 class='black font125'>"+ nombreProducto +"</h1><div class='espacio2XS'></div><h1 class='black font125'>Fabricante: "+ nombreFabricante +"</h1></div></div><div class='row'><div class='col-1-1 center'><button class='carritoEliminar' data-id='"+ id +"'>Eliminar</button></div></div></div></div>");
             }
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
                 imagen = lista.image;
                 nombreProducto = lista.nameProduct
                 nombreFabricante = "Maaloka"
-                id = i; //id de cada producto
+                id = lista.idCart;
                 $("." + nombreClase).append("<div class='col-1-2'><div class='bloqueProducto center'><div class='row centerVertically'><div class='col-1-2'><img data-id='"+ id +"' class='width100 carritoImagen' src='"+ imagen +"'></div><div class='col-1-2'><h1 class='black font125'>"+ nombreProducto +"</h1><div class='espacio2XS'></div><h1 class='black font125'>Fabricante: "+ nombreFabricante +"</div></div><div class='row'><div class='col-1-1 center'><button class='carritoEliminar' data-id='"+ id +"'>Eliminar</button></div></div></div></div>");
             }
 
