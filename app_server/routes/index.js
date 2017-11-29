@@ -28,7 +28,7 @@ router.get('/register', function(req,res) {
 });
 
 router.post('/addWishlist', indexController.addWishlist);
-router.get('/addCart', indexController.addCart);
+router.post('/addCart', indexController.addCart);
 router.get('/addOrder', indexController.addOrder);
 
 router.get('/getWishlist', indexController.getWishlist);
