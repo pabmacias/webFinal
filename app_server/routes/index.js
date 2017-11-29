@@ -23,7 +23,7 @@ router.get('/session', indexController.session);
 
 router.get('/register', indexController.register);
 
-router.get('/addWishlist', indexController.addWishlist);
+router.post('/addWishlist', indexController.addWishlist);
 router.get('/addCart', indexController.addCart);
 router.get('/addOrder', indexController.addOrder);
 

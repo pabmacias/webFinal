@@ -96,6 +96,11 @@ exports.session = function (req,res){
 exports.addWishlist = function (req,res){
 	let response = {};
 
+	//console.log("hola");
+
+	//console.log(req.body);
+	//console.log(res);
+
 	if (req.session && req.session.mail){
 		var data = {
 			mail: req.session.mail
@@ -135,10 +140,8 @@ exports.addWishlist = function (req,res){
 							res.send(response);
 				  	}
 					else{
-						var idP=0;
-
 						//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
-						db.get().query('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');',
+						db.get().query('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+req.body.idProduct+');',
 						 function (err, result) {
 
 							var response = {};
