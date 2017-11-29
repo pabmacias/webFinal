@@ -15,4 +15,6 @@ router.get('/livingRoom', maalokaController.getLivingRoom);
 
 router.get('/bedRoom', maalokaController.getBedRoom);
 
+router.post('/getProduct', maalokaController.getProduct);
+
 module.exports = router;

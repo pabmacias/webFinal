@@ -211,3 +211,33 @@ exports.getBedRoom = function(req,res){
 		res.send(response);
 	})
 }
+
+exports.getProduct = function(req,res){
+	console.log('select * from Products where idProduct="'+req.body.idProduct+'";');
+	db.get().query('select * from Products where idProduct="'+req.body.idProduct+'";', function (err, rows) {
+		var response = {};
+		var data = [];
+
+	    if (err){
+	    	response.status = 'ERROR';
+	    	response.message = err;
+	  	}
+	  	if (rows && rows.length > 0){
+	  		for (var i=0; i<rows.length; i++){
+	  			var product = new Products(rows[i].idProduct,
+            rows[i].nameProduct, rows[i].cost, rows[i].description,
+            rows[i].sale, rows[i].available, rows[i].sold,
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
+	  			data.push(product);
+	  		}
+		    response.status = 'SUCCESS';
+		    response.message = '';
+		    response.data = data;
+		}
+		else{
+			response.status = 'ERROR';
+			response.message = 'No hay registros';
+		}
+		res.send(response);
+	})
+}

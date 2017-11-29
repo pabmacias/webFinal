@@ -216,7 +216,7 @@ exports.addCart = function (req,res){
 						//var idP=0;
 
 						//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
-						db.get().query('insert into Cart_has_Products (idCart, idProduct) values ('+result[0].idCart+','+idP+');',
+						db.get().query('insert into Cart_has_Products (idCart, idProduct) values ('+result[0].idCart+','+req.body.idProduct+');',
 						 function (err, result) {
 
 							var response = {};
@@ -290,7 +290,7 @@ exports.addOrder = function (req,res){
 						//var idP=0;
 
 						//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
-						db.get().query('insert into Orders_has_Products (orderNumber, idProduct) values ('+result[0].orderNumber+','+idP+');',
+						db.get().query('insert into Orders_has_Products (orderNumber, idProduct) values ('+result[0].orderNumber+','+req.body.idProduct+');',
 						 function (err, result) {
 
 							var response = {};
