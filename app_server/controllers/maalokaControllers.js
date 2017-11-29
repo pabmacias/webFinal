@@ -17,7 +17,7 @@ exports.getAll = function(req,res){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
             rows[i].sale, rows[i].available, rows[i].sold,
-						rows[i].idArtist, rows[i].idSubcategories);
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 	  			data.push(product);
 	  		}
 		    response.status = 'SUCCESS';
@@ -47,7 +47,37 @@ exports.getSale = function(req,res){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
             rows[i].sale, rows[i].available, rows[i].sold,
-						rows[i].idArtist, rows[i].idSubcategories);
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
+	  			data.push(product);
+	  		}
+		    response.status = 'SUCCESS';
+		    response.message = '';
+		    response.data = data;
+		}
+		else{
+			response.status = 'ERROR';
+			response.message = 'No hay registros';
+		}
+		res.send(response);
+	})
+}
+
+exports.getSaleMax = function(req,res){
+	console.log('SELECT * FROM Products ORDER BY sale DESC LIMIT 2;');
+	db.get().query('SELECT * FROM Products ORDER BY sale DESC LIMIT 2;', function (err, rows) {
+		var response = {};
+		var data = [];
+
+	    if (err){
+	    	response.status = 'ERROR';
+	    	response.message = err;
+	  	}
+	  	if (rows && rows.length > 0){
+	  		for (var i=0; i<rows.length; i++){
+	  			var product = new Products(rows[i].idProduct,
+            rows[i].nameProduct, rows[i].cost, rows[i].description,
+            rows[i].sale, rows[i].available, rows[i].sold,
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 	  			data.push(product);
 	  		}
 		    response.status = 'SUCCESS';
@@ -77,7 +107,7 @@ exports.getKitchen = function(req,res){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
             rows[i].sale, rows[i].available, rows[i].sold,
-						rows[i].idArtist, rows[i].idSubcategories);
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 	  			data.push(product);
 	  		}
 		    response.status = 'SUCCESS';
@@ -107,7 +137,7 @@ exports.getLivingRoom = function(req,res){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
             rows[i].sale, rows[i].available, rows[i].sold,
-						rows[i].idArtist, rows[i].idSubcategories);
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 	  			data.push(product);
 	  		}
 		    response.status = 'SUCCESS';
@@ -137,7 +167,7 @@ exports.getBedRoom = function(req,res){
 	  			var product = new Products(rows[i].idProduct,
             rows[i].nameProduct, rows[i].cost, rows[i].description,
             rows[i].sale, rows[i].available, rows[i].sold,
-						rows[i].idArtist, rows[i].idSubcategories);
+						rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 	  			data.push(product);
 	  		}
 		    response.status = 'SUCCESS';
