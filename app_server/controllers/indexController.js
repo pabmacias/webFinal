@@ -427,7 +427,90 @@ exports.getWishlist = function(req,res){
 						  			var product = new Products(rows[i].idProduct,
 					            rows[i].nameProduct, rows[i].cost, rows[i].description,
 					            rows[i].sale, rows[i].available, rows[i].sold,
-											rows[i].idArtist, rows[i].idSubcategories);
+											rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
+						  			data.push(product);
+						  		}
+							    response.status = 'SUCCESS';
+							    response.message = '';
+							    response.data = data;
+							}
+							else{
+								response.status = 'ERROR';
+								response.message = 'No hay registros';
+							}
+							res.send(response);
+						})
+					}
+				});
+			}
+		})
+	}
+	else {
+		res.send(response);
+	}
+}
+
+exports.getCart = function(req,res){
+	let response = {};
+
+	if (req.session && req.session.mail){
+		var data = {
+			mail: req.session.mail
+		}
+		response.status = "SUCCESS";
+		response.message = "User already logged";
+		response.data = data
+	}
+	else{
+		response.status = "ERROR";
+		response.message = "User not logged in";
+	}
+
+	if (response.status == "SUCCESS") {
+		db.get().query('select idUser from Users where (mail="'+req.session.mail+'");',
+		 function (err, result) {
+
+			var response = {};
+			var data = {};
+
+
+		  if (err){
+		    	response.status = 'ERROR';
+		    	response.message = err;
+					res.send(response);
+		  	}
+			else{
+				db.get().query('select idCart from Cart where (idUser='+result[0].idUser+');',
+				 function (err, result) {
+
+					var response = {};
+					var data = {};
+
+				  if (err){
+				    	response.status = 'ERROR';
+				    	response.message = err;
+							res.send(response);
+				  	}
+					else{
+						var idP=0;
+
+						//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
+						db.get().query('select * from ((Products INNER JOIN Cart_has_Products ON Products.idProduct = Cart_has_Products.idProduct) INNER JOIN Cart ON Cart.idCart = Cart_has_Products.idCart) where (Cart.idCart='+result[0].idCart+');',
+						 function (err, rows) {
+							var response = {};
+							var data = [];
+
+						    if (err){
+						    	response.status = 'ERROR';
+						    	response.message = err;
+						  	}
+						  	if (rows && rows.length > 0){
+									console.log(rows);
+						  		for (var i=0; i<rows.length; i++){
+						  			var product = new Products(rows[i].idProduct,
+					            rows[i].nameProduct, rows[i].cost, rows[i].description,
+					            rows[i].sale, rows[i].available, rows[i].sold,
+											rows[i].idArtist, rows[i].idSubcategories, rows[i].image);
 						  			data.push(product);
 						  		}
 							    response.status = 'SUCCESS';

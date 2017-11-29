@@ -32,6 +32,6 @@ router.get('/addCart', indexController.addCart);
 router.get('/addOrder', indexController.addOrder);
 
 router.get('/getWishlist', indexController.getWishlist);
-
+router.get('/getCart', indexController.getCart);
 
 module.exports = router;
