@@ -21,7 +21,11 @@ router.get('/login', function(req,res) {
 
 router.get('/session', indexController.session);
 
-router.get('/register', indexController.register);
+router.post('/signup', indexController.register);
+
+router.get('/register', function(req,res) {
+  res.render('register.html');
+});
 
 router.post('/addWishlist', indexController.addWishlist);
 router.get('/addCart', indexController.addCart);

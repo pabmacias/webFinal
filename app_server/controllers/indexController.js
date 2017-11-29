@@ -31,12 +31,11 @@ exports.login = function (req,res){
 }
 
 exports.register = function (req,res){
-	console.log('insert into Users (username, password, nameUser, mail, phone) values ("'+req.body.username+
-		'","'+req.body.password+'","'+req.body.nameUser+'","'+req.body.mail+
-		'","'+req.body.phone+'");');
-	db.get().query('insert into Users (username, password, nameUser, mail, phone) values ("adios", "hola", "Adios", "adios@gmail.com", "123");',
-	 function (err, result) {
-
+	console.log(req.body.mail);
+	//console.log('insert into Users (password, nameUser, mail, phone) values ("'+req.body.password+
+	//'","'+req.body.nameUser+'","'+req.body.mail+'","'+req.body.phone+'");');
+	db.get().query('insert into Users (password, nameUser, mail, phone) values ("'+req.body.password+
+	'","'+req.body.nameUser+'","'+req.body.mail+'","'+req.body.phone+'");', function (err, result) {
 		var response = {};
 		var data = {};
 
@@ -45,15 +44,66 @@ exports.register = function (req,res){
 	    	response.message = err;
 	  	}
 		else{
-			data.insertId = result.insertId;
-			response.status = 'SUCCESS';
-			response.message = '';
-			response.data = data;
+			db.get().query('select idUser from Users where (mail="'+req.body.mail+'");',
+			 function (err, result) {
+
+				var response = {};
+				var data = [];
+
+				console.log(req.body.mail);
+
+				if (err){
+						response.status = 'ERROR';
+						response.message = err;
+						res.send(response);
+					}
+				else{
+					db.get().query('insert into Wishlists (idUser) values ('+result[0].idUser+');',
+					 function (err, result) {
+
+						var response = {};
+						var data = {};
+
+						if (err){
+								response.status = 'ERROR';
+								response.message = err;
+								res.send(response);
+							}
+						else{
+							data.insertId = result.insertId;
+							response.status = 'SUCCESS';
+							response.message = '';
+							response.data = data;
+							//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
+						}
+						//res.send(response);
+					});
+					db.get().query('insert into Cart (idUser) values ('+result[0].idUser+');',
+					 function (err, result) {
+
+						var response = {};
+						var data = {};
+
+						if (err){
+								response.status = 'ERROR';
+								response.message = err;
+								res.send(response);
+							}
+						else{
+							data.insertId = result.insertId;
+							response.status = 'SUCCESS';
+							response.message = '';
+							response.data = data;
+							//console.log('insert into Wishlists_has_Products (idWishlist, idProduct) values ('+result[0].idWishlist+','+idP+');');
+						}
+						res.send(response);
+					});
+				}
+			})
 		}
-		res.send(response);
 	})
 
-	var idU = db.get().query('select idUser from Users where (mail="'+req.body.mail+'");');
+	/*var idU = db.get().query('select idUser from Users where (mail="'+req.body.mail+'");');
 
 	console.log(idU);
 
@@ -73,7 +123,7 @@ exports.register = function (req,res){
 			response.data = data;
 		}
 		res.send(response);
-	})
+	})*/
 }
 
 exports.session = function (req,res){
